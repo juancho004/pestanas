@@ -2,7 +2,7 @@
 /**
  * Factory .
  *
- * @author Jcbarreno <jcbarreno.tpp@gmail.com>
+ * @author Jcbarreno <jcbarreno.b@gmail.com>
  * @version 1.0
  * @package Class Credentials Facebook
  */

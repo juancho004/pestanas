@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Factory .
+ *
+ * @author Jcbarreno <jcbarreno.b@gmail.com>
+ * @version 1.0
+ * @package Facebook
+ */
 
 class FacebookServiceProvider {
 
