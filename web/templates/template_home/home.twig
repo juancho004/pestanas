@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+    <head>
+        <title>{{ TITLE_PAGE }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="{{ app.source }}/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="{{ app.source }}/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="{{ app.source }}/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+        <link href="{{ app.source }}/css/blitzer/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{{ app.source }}/js/jQuery-1.10.1.js"></script>
+        <script type="text/javascript" src="{{ app.source }}/js/bootstrap.js"></script>
+        <script type="text/javascript" src="{{ app.source }}/fancybox/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="{{ app.source }}/js/jquery-ui-1.9.2.custom.js"></script>
+        <script type="text/javascript" src="{{ app.source }}/js/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="{{ app.source }}/js/plugin.crete.pestana.js"></script>
+
+
+    <!-- script type="text/javascript" src="{{ app.source }}/js/nicEdit-latest.js"></script --> 
+    <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+
+
+        <script type="text/javascript">
+
+            function overgroup(id_panel)
+            {
+                jQuery( "#"+id_panel+" .list-group-item" ).addClass('active');               
+            }
+            function outgroup(id_panel)
+            {
+                jQuery( "#"+id_panel+" .list-group-item" ).removeClass('active');               
+            }
+
+        </script>
+
+        
+    </head>
+    <body>
+
+        <div id="main-content" class="row">
+
+            <form action="{{ app.request.basepath }}/index.php/savetab" method="post" enctype="multipart/form-data">
+                <div id="content-create-pestana" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ADMINISTRADOR DE PESTAÑAS</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <div class="panel-heading">
+
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="{{ app.request.basepath }}/index.php"><span class="glyphicon glyphicon-cog">&nbsp;</span>CREAR PESTAÑAS</a>
+                                </li>
+                                <li>
+                                    <a href="{{ app.request.basepath }}/index.php/pestanas">VER PESTAÑAS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="content-main-tab" class="well well-sm">
+
+                            <div id="panel-nombre-prestana" class="list-group" onmouseover="overgroup(this.id)" onmouseout="outgroup(this.id)" >
+                                <div class="list-group-item">
+                                    <h3>Ingresa nombre de la pestaña</h3>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                                      <input id="nombre-pestana" name="nombre_pestana" type="text" class="form-control" placeholder="Nombre Pestaña" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="panel-pais-prestana" class="list-group" onmouseover="overgroup(this.id)" onmouseout="outgroup(this.id)" >
+                                <div class="list-group-item">
+                                    <h3>Selecciona un Pais</h3>
+                                    <select class="form-control input-lg" name="pais" >
+                                        <option value="1">Guatemala</option>
+                                        <option value="2">El Salvador</option>
+                                        <option value="3">Nicaragua</option>
+                                        <option value="4">Hondureas</option>
+                                        <option value="5">Costa Rica</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="panel-html-prestana" class="list-group" onmouseover="overgroup(this.id)" onmouseout="outgroup(this.id)" >
+                                <div class="list-group-item">
+                                    <h3>Ingresar Formato HTML</h3>
+                                    
+                                    <div class="input-group">
+
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <input class="formato-html" type="radio" name="ishtml" value="1" >
+                                                </span>
+                                                <input type="text" class="form-control" value="Si" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input class="formato-html" type="radio" name="ishtml" value="0" checked >
+                                            </span>
+                                            <input type="text" class="form-control" value="No" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="panel-fan-prestana" class="list-group" onmouseover="overgroup(this.id)" onmouseout="outgroup(this.id)" >
+                                <div class="list-group-item">
+                                    <h3>Verificar si es FAN ó NO</h3>
+                                    
+                                    <div class="input-group">
+
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <input id="es-fan" class="validate-fan" type="radio" name="isfan" value="1" >
+                                                </span>
+                                                <input type="text" class="form-control" value="Si" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input id="no-fan" class="validate-fan"  type="radio" name="isfan" value="0" checked >
+                                            </span>
+                                            <input type="text" class="form-control" value="No" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                             <div id="panel-imagen-prestana" class="list-group" onmouseover="overgroup(this.id)" onmouseout="outgroup(this.id)" >
+                                <div class="list-group-item actives">
+                                    <h3>Cargar imagen de la pestaña</h3>
+                                    <div class="input-group">
+                                        <span class="btn btn-default btn-file">
+                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                        &nbsp;&nbsp;&nbsp;Buscar imagen <input id="uploadr-imagen-pestana"  name="uploadr_imagen_pestana" type="file">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+
+                    </div>
+
+                    <textarea name="content" style="width:100%"></textarea>
+
+                    <div class="panel-footer">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block">Guardar</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            var basepath = '{{ app.request.basepath }}';
+            jQuery(document).ready(function(){
+                bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+                jQuery('#content-create-pestana').createpestana();
+            });
+        </script>
+
+        
+
+    </body>
+</html>

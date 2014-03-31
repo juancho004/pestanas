@@ -1,0 +1,4 @@
+Options -Indexes
+<Files ~ "(config|firewall)\.php">
+   Order Allow,Deny
+</Files>

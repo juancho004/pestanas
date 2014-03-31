@@ -1,0 +1,89 @@
+/*
+ +------------------------------------------------------------------+
+ | NinjaFirewall   (c)2010-2012 Jerome Bruandet                     |
+ |                 <contact@ninjafirewall.com>                      |
+ +------------------------------------------------------------------+
+ | REVISION:       2012/09/02 23:07:43                              |
+ +------------------------------------------------------------------+
+*/
+fieldset { border: 1px solid #999999;}
+body { cursor: default;}
+legend { border: 1px solid #ffd821;}
+legend:hover{color: #ffffff;background: #ffd821;}
+
+.smallblack {
+   font-family: Verdana,Arial, Helvetica,Ubuntu,"Bitstream Vera Sans", sans-serif;
+   font-size: 12px;
+   line-height: 16px;
+   color: #000000;
+}
+.smallred { color: #FF0000;}
+
+.input {
+   color: #000000;
+   font-family: Verdana,Arial, Helvetica,Ubuntu,"Bitstream Vera Sans", sans-serif;
+   font-size: 12px;
+   border: 1px solid #666666;
+   background-color: #ffffff;
+}
+
+input:focus {background-color: #FDCD25;}
+
+.button {
+   color: #000000;
+   background-color: #ffffff;
+   font-family: Verdana,Arial, Helvetica,Ubuntu, "Bitstream Vera Sans",sans-serif;
+   font-size: 11px;
+   line-height: 20px;
+   border: 1px solid #666666;
+}
+
+.button:hover{
+   color:#ffffff;
+   background-color:#FDCD25;
+}
+
+.tinyblack {
+   font-family: Verdana,Arial, Helvetica,Ubuntu, "Bitstream Vera Sans",sans-serif;
+   font-size: 10px;
+   line-height: 12px;
+   color: #000000;
+}
+.tinygrey {
+   font-family: Verdana,Arial, Helvetica,Ubuntu, "Bitstream Vera Sans",sans-serif;
+   font-size: 10px;
+   line-height: 12px;
+   color: #999999;
+}
+.tinyred {
+   font-family: Verdana,Arial, Helvetica,Ubuntu, "Bitstream Vera Sans",sans-serif;
+   font-size: 10px;
+   line-height: 12px;
+   color: #FF0000;
+}
+a.links:hover, a.linkss:active {
+   color: #ffffff;
+   background-color: #FDCD25;
+}
+
+a {
+   color: #000000;
+   text-decoration: none;
+}
+
+label {
+	cursor:pointer;
+}
+
+#username {
+   background: white url(login.png) no-repeat 0px 0px;
+   padding: 0px 0px 0px 18px;
+}
+
+#username:focus {background-color: #FDCD25;}
+
+#password {
+   background: white url(login.png) no-repeat -1px -23px;
+   padding: 0px 0px 0px 18px;
+}
+#password:focus { background-color: #FDCD25;}

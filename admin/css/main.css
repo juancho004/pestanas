@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("normalize.css");
+@media all {
+
+.container 										{ margin-left: auto; margin-right: auto; }
+.empty_param									{ border-color: rgba(239, 0, 10, 0.4) !important; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset, 0 0 8px rgba(239, 0, 10, 0.4) !important; outline: 0 none; }
+
+.facebook-admin-box								{ width: 100%; }
+.facebook-admin-title							{ min-width: 12% !important; }
+.facebook-admin-input							{ }
+.facebook-admin-title strong.small-view 		{ display: none; }
+.title-home-mobile 								{ display: none; }
+
+.info-param-tooltip i							{ margin-top: -6px; margin-left: 5px; }
+
+/*Formulario*/
+#form-facebook 									{ position: relative; }
+
+/*LOGIN*/
+.form-signin 									{ background-color: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 5px 5px 5px 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); margin: 0 auto 20px;
+    												max-width: 300px; padding: 19px 29px 29px;
+    											}
+
+
+.form-signin input[type="text"], 
+.form-signin input[type="password"] 			{ font-size: 16px; height: auto; margin-bottom: 15px; padding: 7px 9px; }
+
+.border-line									{  -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; border-color: -moz-use-text-color -moz-use-text-color #E5E5E5;
+    												border-image: none; border-style: none none solid;  border-width: 0 0 1px; color: #333333; display: block; padding: 0;
+    												width: 100%; }
+
+.table_users 									{overflow-y:auto; width: auto; max-height: 300px;}
+.table_menus 									{overflow-y:auto; width: auto; max-height: 600px;}
+
+
+
+@media (min-width: 320px) and (max-width: 360px) {
+
+	.facebook-admin-title strong { display: none; }
+	.facebook-admin-title strong.small-view { display: block; font-size: 80%; }
+	.facebook-admin-title					{ height: 30px !important; width: 30px !important; }
+}
+
+
+@media (max-width: 800px) {
+
+	.title-home-web 	{ display: none; }
+	.title-home-mobile 	{ display: block; }
+}
+
+}
+/*===================
+	Template manager
+====================*/
+.editbox				{ margin: 0.4em; padding: 5px; font-family: monospace; font-size: 10pt;color: black; width: 100%; max-width: 100%; height: 650px; float: left; }
+.close-dir  			{ display: none; }
+.active-dir  			{ display: block; }
